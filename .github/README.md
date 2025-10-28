@@ -1,3 +1,9 @@
-> ```npm install```
+> 1. Install Dependancies
+```bash
+npm install
+```
 
-> ```npm run dev```
+> 2. Run the project
+```bash
+npm run dev
+```
