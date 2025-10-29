@@ -1,7 +1,7 @@
 <template>
   <section class="my-12 container grid-design">
     <div class="col-span-full">
-      About
+      Contact
     </div>
   </section>
 </template>
