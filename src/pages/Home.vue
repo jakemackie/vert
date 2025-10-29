@@ -5,12 +5,11 @@
     </div>
 
     <div class="col-span-full lg:col-span-5 flex flex-col gap-4 p-4 bg-gray-800/50 rounded-lg">
-      You can build awesome layouts really easily with this grid layout
       <a 
         href="/about" 
-        class="aspect-video flex items-center justify-center w-full bg-gray-800 border-2 border-gray-500 hover:border-blue-300 rounded-md"
+        class="aspect-video flex items-center justify-center text-center w-full bg-gray-800 border-2 border-gray-500 hover:border-blue-300 rounded-md"
       >
-        Imagine there was a video here... (click me to go to the about page)
+        Click me to go to the about page
       </a>
     </div>
   </section>
