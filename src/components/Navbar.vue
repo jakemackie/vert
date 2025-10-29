@@ -1,3 +1,8 @@
+<script setup lang="ts">
+  import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
+  import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+</script>
+
 <template>
   <Disclosure as="nav" class="relative bg-white shadow dark:bg-gray-800/50 dark:shadow-none dark:after:pointer-events-none dark:after:absolute dark:after:inset-x-0 dark:after:bottom-0 dark:after:h-px dark:after:bg-white/10" v-slot="{ open }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -89,8 +94,3 @@
     </DisclosurePanel>
   </Disclosure>
 </template>
-
-<script setup>
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
-</script>
