@@ -1,16 +1,25 @@
 <script setup lang="ts">
   import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
   import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+  import vertLogo from '../assets/images/vert_logo.webp'
 </script>
 
 <template>
   <Disclosure as="nav" class="relative bg-white shadow dark:bg-gray-800/50 dark:shadow-none dark:after:pointer-events-none dark:after:absolute dark:after:inset-x-0 dark:after:bottom-0 dark:after:h-px dark:after:bg-white/10" v-slot="{ open }">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="flex h-16 justify-between">
+    <div class="container grid-design">
+      <div class="col-span-full flex h-16 justify-between">
         <div class="flex">
           <div class="flex shrink-0 items-center">
-            <img class="h-8 w-auto dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-            <img class="hidden h-8 w-auto dark:block" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
+            <img
+              :src="vertLogo"
+              class="h-8 w-auto dark:hidden"
+              alt="Team Vert"
+            />
+            <img
+              :src="vertLogo"
+              class="hidden h-8 w-auto dark:block"
+              alt="Team Vert"
+            />
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
             <!-- Current: "border-indigo-600 text-gray-900 dark:border-indigo-500 dark:text-white", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300 dark:hover:border-white/20 dark:hover:text-white" -->

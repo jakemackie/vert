@@ -1,5 +1,5 @@
 .container {
-  @apply mx-auto container px-3 lg:px-0;
+  @apply mx-auto max-w-7xl container px-3 2xl:px-0;
 }
 
 .grid-design {
