@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-.container {
-  @apply mx-auto container;
-}
-.grid-design {
-  @apply grid grid-cols-4 lg:grid-cols-12 gap-11;
-}
+/* Shared Theme Styles */
+@import "./theme/containers.css";
+@import "./theme/typography.css";
