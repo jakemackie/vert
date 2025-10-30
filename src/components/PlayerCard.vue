@@ -11,7 +11,7 @@ const profile = computed(() => players[props.player])
 </script>
 
 <template>
-  <article class="relative overflow-visible divide-y rounded-lg divide-white/10 bg-gray-800/50 outline -outline-offset-1 outline-white/10">
+  <article class="relative overflow-visible divide-y rounded-lg divide-white/10 bg-gray-800/50 outline -outline-offset-1 outline-white/10 group">
     <div class="px-4 py-5 sm:px-6">
       <!-- Header -->
       <h3 class="text-2xl font-medium">{{ profile.name }}</h3>
@@ -24,15 +24,15 @@ const profile = computed(() => players[props.player])
       <!-- Footer -->
       <p class="text-gray-400">{{ profile.role }}</p>
       <div class="flex flex-wrap items-center gap-4">
-        <a v-if="profile.socials?.tiktok" :href="profile.socials.tiktok" target="_blank" rel="noopener noreferrer">
+        <a v-if="profile.socials?.tiktok" :href="profile.socials.tiktok" target="_blank" rel="noopener noreferrer" class="hover:rotate-6 hover:scale-125 transition-transform duration-200 ease-out">
           <span class="sr-only">TikTok</span>
           <TikTokIcon class="size-5 text-gray-400 hover:text-gray-300" />
         </a>
-        <a v-if="profile.socials?.youtube" :href="profile.socials.youtube" target="_blank" rel="noopener noreferrer">
+        <a v-if="profile.socials?.youtube" :href="profile.socials.youtube" target="_blank" rel="noopener noreferrer" class="hover:rotate-6 hover:scale-125 transition-transform duration-200 ease-out">
           <span class="sr-only">YouTube</span>
           <YouTubeIcon class="size-5 text-gray-400 hover:text-gray-300" />
         </a>
-        <a v-if="profile.socials?.discord" :href="profile.socials.discord" target="_blank" rel="noopener noreferrer">
+        <a v-if="profile.socials?.discord" :href="profile.socials.discord" target="_blank" rel="noopener noreferrer" class="hover:rotate-6 hover:scale-125 transition-transform duration-200 ease-out">
           <span class="sr-only">Discord</span>
           <DiscordIcon class="size-5 text-gray-400 hover:text-gray-300" />
         </a>
@@ -40,7 +40,7 @@ const profile = computed(() => players[props.player])
     </div>
 
     <!-- Profile Image -->
-    <div class="absolute -top-1/5 lg:-top-1/4 right-0 size-20 lg:size-24 bg-gray-800 border border-gray-700 drop-shadow-xl drop-shadow-gray-900 rounded-full overflow-hidden">
+    <div class="absolute -top-1/5 lg:-top-1/4 right-0 size-20 lg:size-24 bg-gray-800 border border-gray-700 drop-shadow-xl drop-shadow-gray-900 rounded-full overflow-hidden group-hover:drop-shadow-2xl group-hover:drop-shadow-blue-100/20 transition duration-200 ease-in-out group-hover:border-gray-600">
       <img :src="profile.avatar" class="size-full object-contain" />
     </div>
   </article>
