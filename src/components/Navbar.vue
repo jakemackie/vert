@@ -19,7 +19,7 @@ const navItems = [
 <template>
   <Disclosure
     as="nav"
-    class="relative bg-white shadow dark:bg-gray-800/50 dark:shadow-none dark:after:pointer-events-none dark:after:absolute dark:after:inset-x-0 dark:after:bottom-0 dark:after:h-px dark:after:bg-white/10"
+    class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10"
     v-slot="{ open }"
   >
     <div class="container grid-design">
