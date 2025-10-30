@@ -4,6 +4,11 @@ import droAvatar from '../assets/avatars/dro.webp'
 import terrorAvatar from '../assets/avatars/terror.webp'
 import uncAvatar from '../assets/avatars/unc.webp'
 import sireAvatar from '../assets/avatars/sire.webp'
+import pavementAvatar from '../assets/avatars/pavement.webp'
+import cloudyboiAvatar from '../assets/avatars/cloudyboi.webp'
+import stainAvatar from '../assets/avatars/stain.webp'
+import slitAvatar from '../assets/avatars/slit.webp'
+import dj4yAvatar from '../assets/avatars/dj4y.webp'
 
 export const PlayerKey = {
   OS: 'os',
@@ -11,7 +16,12 @@ export const PlayerKey = {
   DRO: 'dro',
   TERROR: 'terror',
   UNC: 'unc',
-  SIRE: 'sire'
+  SIRE: 'sire',
+  PAVEMENT: 'pavement',
+  CLOUDYBOI: 'cloudyboi',
+  STAIN: 'stain',
+  SLIT: 'slit',
+  DJ: 'dj4y',
 } as const
 
 export type PlayerId = typeof PlayerKey[keyof typeof PlayerKey]
@@ -92,6 +102,56 @@ export const players: Record<PlayerId, PlayerProfile> = {
       tiktok: 'https://www.tiktok.com/@.siree'
     },
     avatar: sireAvatar
+  },
+  [PlayerKey.PAVEMENT]: {
+    id: PlayerKey.PAVEMENT,
+    name: 'Pavement',
+    role: 'Trickliner',
+    description: 'I really like skate.',
+    socials: {
+      tiktok: 'https://www.tiktok.com/@.riddance'
+    },
+    avatar: pavementAvatar
+  },
+  [PlayerKey.CLOUDYBOI]: {
+    id: 'cloudyboi',
+    name: 'Cloudy',
+    role: 'Trickliner',
+    description: 'console gamer',
+    socials: {
+      tiktok: 'https://www.tiktok.com/@cloudyboi'
+    },
+    avatar: cloudyboiAvatar
+  },
+  [PlayerKey.STAIN]: {
+    id: 'stain',
+    name: 'stain',
+    role: 'Trickliner',
+    description: 'I just rap ngl',
+    socials: {
+      tiktok: 'https://www.tiktok.com/@stain5990'
+    },
+    avatar: stainAvatar
+  },
+  [PlayerKey.SLIT]: {
+    id: 'slit',
+    name: 'Slit',
+    role: 'Trickliner',
+    description: 'Im better',
+    socials: {
+      tiktok: 'https://www.tiktok.com/@x7slit'
+    },
+    avatar: slitAvatar
+  },
+  [PlayerKey.DJ]: {
+    id: 'dj4y',
+    name: 'dj4y',
+    role: 'Trickliner',
+    description: 'Store clips are banned',
+    socials: {
+      tiktok: 'https://www.tiktok.com/@dj4y'
+    },
+    avatar: dj4yAvatar
   }
 }
 

@@ -40,7 +40,7 @@ const profile = computed(() => players[props.player])
     </div>
 
     <!-- Profile Image -->
-    <div class="absolute -top-1/5 lg:-top-1/4 right-0 size-20 lg:size-24 bg-gray-800 border border-gray-700 drop-shadow-xl drop-shadow-gray-900 rounded-full overflow-hidden group-hover:drop-shadow-2xl group-hover:drop-shadow-blue-100/20 transition duration-200 ease-in-out group-hover:border-gray-600">
+    <div class="absolute -top-1/5 lg:-top-1/4 right-0 size-20 lg:size-24 bg-gray-800 border border-gray-700 drop-shadow-xl drop-shadow-gray-900 rounded-full overflow-hidden">
       <img :src="profile.avatar" class="size-full object-contain" />
     </div>
   </article>
