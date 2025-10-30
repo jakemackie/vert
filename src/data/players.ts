@@ -2,12 +2,16 @@ import osAvatar from '../assets/avatars/os.webp'
 import bensAvatar from '../assets/avatars/bens.webp'
 import droAvatar from '../assets/avatars/dro.webp'
 import terrorAvatar from '../assets/avatars/terror.webp'
+import uncAvatar from '../assets/avatars/unc.webp'
+import sireAvatar from '../assets/avatars/sire.webp'
 
 export const PlayerKey = {
   OS: 'os',
   BENS: 'bens',
   DRO: 'dro',
   TERROR: 'terror',
+  UNC: 'unc',
+  SIRE: 'sire'
 } as const
 
 export type PlayerId = typeof PlayerKey[keyof typeof PlayerKey]
@@ -69,6 +73,26 @@ export const players: Record<PlayerId, PlayerProfile> = {
     },
     avatar: terrorAvatar,
   },
+  [PlayerKey.UNC]: {
+    id: PlayerKey.UNC,
+    name: 'Uncle Drew',
+    role: 'Trickliner / Uncle',
+    description: 'If you\'re gonna hit a clip, hit the whole clip, and don\'t fall at the end',
+    socials: {
+      tiktok: 'https://www.tiktok.com/@skate.unc'
+    },
+    avatar: uncAvatar
+  },
+  [PlayerKey.SIRE]: {
+    id: PlayerKey.SIRE,
+    name: 'sire',
+    role: 'Swaggiest Trickliner',
+    description: 'you all suck',
+    socials: {
+      tiktok: 'https://www.tiktok.com/@.siree'
+    },
+    avatar: sireAvatar
+  }
 }
 
 export default players
