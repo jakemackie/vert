@@ -4,7 +4,7 @@ import TikTokIcon from '../assets/social-icons/tiktok.svg'
 import YouTubeIcon from '../assets/social-icons/youtube.svg'
 import DiscordIcon from '../assets/social-icons/discord.svg'
 import type { PlayerId } from '../data/players'
-import { players } from '../data/players'
+import { players, Role } from '../data/players'
 
 const props = defineProps<{ player: PlayerId }>()
 const profile = computed(() => players[props.player])
@@ -22,7 +22,7 @@ const profile = computed(() => players[props.player])
     </div>
     <div class="flex justify-between px-4 py-4 sm:px-6">
       <!-- Footer -->
-      <p class="text-gray-400">{{ profile.role }}</p>
+  <p :class="profile.role === Role.LEAD_TRICKLINER ? 'text-blue-400' : 'text-gray-400'">{{ profile.role }}</p>
       <div class="flex flex-wrap items-center gap-4">
         <a v-if="profile.socials?.tiktok" :href="profile.socials.tiktok" target="_blank" rel="noopener noreferrer" class="hover:rotate-6 hover:scale-125 transition-transform duration-200 ease-out">
           <span class="sr-only">TikTok</span>

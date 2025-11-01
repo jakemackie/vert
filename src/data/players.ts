@@ -9,6 +9,7 @@ import cloudyboiAvatar from '../assets/avatars/cloudyboi.webp'
 import stainAvatar from '../assets/avatars/stain.webp'
 import slitAvatar from '../assets/avatars/slit.webp'
 import dj4yAvatar from '../assets/avatars/dj4y.webp'
+import tyzAvatar from '../assets/avatars/tyz.webp'
 
 export const PlayerKey = {
   OS: 'os',
@@ -22,6 +23,7 @@ export const PlayerKey = {
   STAIN: 'stain',
   SLIT: 'slit',
   DJ: 'dj4y',
+  TYZ: 'tyz'
 } as const
 
 export type PlayerId = typeof PlayerKey[keyof typeof PlayerKey]
@@ -35,17 +37,24 @@ export type Socials = {
 export interface PlayerProfile {
   id: PlayerId
   name: string
-  role: string
+  role: RoleType
   description?: string
   socials?: Socials
   avatar: string
 }
 
+export const Role = {
+  TRICKLINER: 'Trickliner',
+  LEAD_TRICKLINER: 'Lead Trickliner',
+} as const
+
+export type RoleType = typeof Role[keyof typeof Role]
+
 export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.OS]: {
     id: PlayerKey.OS,
     name: 'os',
-    role: 'Trickliner',
+    role: Role.TRICKLINER,
     description: 'Convinced he looks like nettspend',
     socials: {
       youtube: 'https://www.youtube.com/@os_uk',
@@ -56,7 +65,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.BENS]: {
     id: PlayerKey.BENS,
     name: 'BenS',
-    role: 'Trickliner',
+    role: Role.TRICKLINER,
     description: 'Ragebait victim',
     socials: {
       tiktok: 'https://www.tiktok.com/@bens',
@@ -66,7 +75,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.DRO]: {
     id: PlayerKey.DRO,
     name: 'Dro',
-    role: 'Trickliner',
+    role: Role.TRICKLINER,
     description: 'Finally bought a PC',
     socials: {
       tiktok: 'https://www.tiktok.com/@dro',
@@ -76,7 +85,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.TERROR]: {
     id: PlayerKey.TERROR,
     name: 'Terror',
-    role: 'Trickliner',
+    role: Role.TRICKLINER,
     description: 'The genius behind the \'Terror Slide\'',
     socials: {
       tiktok: 'https://www.tiktok.com/@terror'
@@ -86,7 +95,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.UNC]: {
     id: PlayerKey.UNC,
     name: 'Uncle Drew',
-    role: 'Trickliner / Uncle',
+    role: Role.TRICKLINER,
     description: 'If you\'re gonna hit a clip, hit the whole clip, and don\'t fall at the end',
     socials: {
       tiktok: 'https://www.tiktok.com/@skate.unc'
@@ -96,7 +105,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.SIRE]: {
     id: PlayerKey.SIRE,
     name: 'sire',
-    role: 'Swaggiest Trickliner',
+    role: Role.TRICKLINER,
     description: 'you all suck',
     socials: {
       tiktok: 'https://www.tiktok.com/@.siree'
@@ -106,7 +115,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.PAVEMENT]: {
     id: PlayerKey.PAVEMENT,
     name: 'Pavement',
-    role: 'Trickliner',
+    role: Role.TRICKLINER,
     description: 'I really like skate.',
     socials: {
       tiktok: 'https://www.tiktok.com/@.riddance'
@@ -116,7 +125,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.CLOUDYBOI]: {
     id: 'cloudyboi',
     name: 'Cloudy',
-    role: 'Trickliner',
+    role: Role.TRICKLINER,
     description: 'console gamer',
     socials: {
       tiktok: 'https://www.tiktok.com/@cloudyboi'
@@ -126,7 +135,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.STAIN]: {
     id: 'stain',
     name: 'stain',
-    role: 'Trickliner',
+    role: Role.TRICKLINER,
     description: 'I just rap ngl',
     socials: {
       tiktok: 'https://www.tiktok.com/@stain5990'
@@ -136,7 +145,7 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.SLIT]: {
     id: 'slit',
     name: 'Slit',
-    role: 'Trickliner',
+    role: Role.TRICKLINER,
     description: 'Im better',
     socials: {
       tiktok: 'https://www.tiktok.com/@x7slit'
@@ -146,12 +155,22 @@ export const players: Record<PlayerId, PlayerProfile> = {
   [PlayerKey.DJ]: {
     id: 'dj4y',
     name: 'dj4y',
-    role: 'Trickliner',
+    role: Role.LEAD_TRICKLINER,
     description: 'Store clips are banned',
     socials: {
       tiktok: 'https://www.tiktok.com/@dj4y'
     },
     avatar: dj4yAvatar
+  },
+  [PlayerKey.TYZ]: {
+    id: 'tyz',
+    name: 'Tyz',
+    role: Role.TRICKLINER,
+    description: 'It\'s whatever',
+    socials: {
+      tiktok: 'https://www.tiktok.com/@tyzwho'
+    },
+    avatar: tyzAvatar
   }
 }
 
