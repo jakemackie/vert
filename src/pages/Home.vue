@@ -1,23 +1,45 @@
 <script setup lang="ts">
-import 'lite-youtube-embed/src/lite-yt-embed.css'
-import 'lite-youtube-embed'
+import { useVideoBanner } from '../composables/useVideoBanner'
+
+import logo from '../assets/images/vert_logo_3d.gif'
+
+// Array of video paths (relative to `public/` folder)
+const videos = [
+  '/videos/skate_infinity_2.mp4',
+  '/videos/skateproj_lumberjack_2_3.mp4'
+]
+
+const { currentVideo } = useVideoBanner(videos, 2000) // 2 seconds interval to like flip between em
 </script>
 
 <template>
-  <section class="my-12 container grid-design">
-    <div class="col-span-full lg:col-start-4 lg:col-span-6">
-      <h2 class="text-4xl font-bold text-center">Team Vert</h2>
-    </div>
+  <!-- Create a section with responsive height and width -->
+  <section class="relative w-full h-[calc(100vh-64px)] overflow-hidden">
+    <!-- Looping the background videos n shit -->
+    <video
+      :src="currentVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="blur-sm absolute top-0 left-0 w-full h-full object-cover"
+    ></video>
 
-    <div class="col-span-full lg:col-start-4 lg:col-span-6 flex flex-col gap-4 p-4 bg-gray-800/50 rounded-lg">
-      <div class="aspect-video flex items-center justify-center w-full border-2 border-gray-500 hover:border-blue-300 rounded-md">
-        <lite-youtube
-          class="size-full"
-          videoid="z3o1EYT8s8c"
-          style="aspect-ratio: 16/9;"
-          params="color=white&theme=dark"
-        ></lite-youtube>
-      </div>
+    <!-- The overlay and the title/logo -->
+    <div class="absolute top-0 left-0 w-full h-full bg-black/65 flex items-center justify-center">
+      <img
+        :src="logo"
+        alt="Team Vert Logo"
+        class="h-32 sm:h-40 md:h-125 object-contain drop-shadow-lg"
+      />
     </div>
   </section>
+
+  <!-- And then content below the banner playing the vids
+  <section class="py-16 bg-zinc-950 text-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Welcome to Team Vert</h2>
+    <p class="max-w-xl mx-auto text-lg">
+      Check out our latest skate projects and videos.
+    </p>
+  </section>-->
 </template>

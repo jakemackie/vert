@@ -6,7 +6,7 @@ import DiscordIcon from '../assets/social-icons/discord.svg'
 </script>
 
 <template>
-  <footer class="bg-gray-800/50 border-t border-white/10">
+  <footer class="bg-zinc-950 border-t border-white/10">
     <div class="max-w-7xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
       <!-- Internal links -->
       <nav class="flex flex-col sm:flex-row flex-wrap justify-center -mx-5 -my-2">

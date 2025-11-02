@@ -11,7 +11,7 @@ const profile = computed(() => players[props.player])
 </script>
 
 <template>
-  <article class="relative overflow-visible divide-y rounded-lg divide-white/10 bg-gray-800/50 outline -outline-offset-1 outline-white/10 group">
+  <article class="relative overflow-visible divide-y rounded-lg divide-white/10 bg-zinc-800/50 outline -outline-offset-1 outline-white/10 group">
     <div class="px-4 py-5 sm:px-6">
       <!-- Header -->
       <h3 class="text-2xl font-medium">{{ profile.name }}</h3>
