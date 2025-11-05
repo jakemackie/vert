@@ -1,4 +1,4 @@
 /* Global Text Selection Background Color */
 ::selection {
-  @apply bg-gray-600;
+  @apply bg-zinc-600;
 }
