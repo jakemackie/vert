@@ -52,7 +52,7 @@ const navItems = [
         <!-- Mobile menu button -->
         <div class="-mr-2 flex items-center sm:hidden">
           <DisclosureButton
-            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-600 dark:hover:bg-white/5 dark:hover:text-white dark:focus:outline-indigo-500"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-2 focus:-outline-offset-1 focus:outline-zinc-600 dark:hover:bg-white/5 dark:hover:text-white dark:focus:outline-zinc-500"
           >
             <span class="absolute -inset-0.5"></span>
             <span class="sr-only">Open main menu</span>
